@@ -1,3 +1,4 @@
+import 'package:dailyban/UI/HomePage/home_page_bindings.dart';
 import 'package:dailyban/ui/HomePage/home_page_view.dart';
 import 'package:dailyban/ui/TeamPage/team_page_bindings.dart';
 import 'package:dailyban/ui/TeamPage/team_page_view.dart';
@@ -18,12 +19,14 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'DailyBan',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        backgroundColor: Colors.black,
+        primarySwatch: Colors.grey,
       ),
       getPages: [
         GetPage(
           name: "/home",
-          page: () => const HomePage(),
+          page: () => HomePage(),
+          binding: HomePageBindings(),
         ),
         GetPage(
           name: "/summoner",

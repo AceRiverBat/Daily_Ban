@@ -14,12 +14,13 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'DailyBan',
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        backgroundColor: Colors.black,
+        primarySwatch: Colors.grey,
       ),
       getPages: [
         GetPage(
           name: "/home",
-          page: () => const HomePage(),
+          page: () => HomePage(),
         )
       ],
       initialRoute: "/home",

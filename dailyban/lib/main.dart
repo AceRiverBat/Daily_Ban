@@ -1,11 +1,10 @@
-import 'package:dailyban/widget/HomePage/home_page_view.dart';
-import 'package:dailyban/widget/TeamPage/team_page_bindings.dart';
-import 'package:dailyban/widget/UserPage/user_page_bindings.dart';
-import 'package:dailyban/widget/UserPage/user_page_view.dart';
+import 'package:dailyban/ui/HomePage/home_page_view.dart';
+import 'package:dailyban/ui/TeamPage/team_page_bindings.dart';
+import 'package:dailyban/ui/TeamPage/team_page_view.dart';
+import 'package:dailyban/ui/UserPage/user_page_bindings.dart';
+import 'package:dailyban/ui/UserPage/user_page_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'widget/TeamPage/team_page_view.dart';
 
 void main() {
   runApp(const MyApp());

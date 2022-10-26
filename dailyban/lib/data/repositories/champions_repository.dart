@@ -51,7 +51,7 @@ class ChampionsRepository {
   }
 
   String stringFormatForImage(String toFormat) {
-    toFormat = toFormat.replaceAll("'", "").toLowerCase();
+    toFormat = toFormat.replaceAll("'", "").replaceAll(" ", "").toLowerCase();
     toFormat = toFormat[0].toUpperCase() + toFormat.substring(1);
     return toFormat;
   }

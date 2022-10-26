@@ -23,7 +23,7 @@ class UserPageController extends GetxController with StateMixin {
             summonerName: args["summonername"], server: args["server"]);
         List<Champion> newChampList = await championsRepository.getChampions(
             server: args["server"], count: 5, id: sum.id);
-        newSum = sum.copyWith(championList: newChampList);
+        sum = sum.copyWith(championList: newChampList);
         change(null, status: RxStatus.success());
       }
     }

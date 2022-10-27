@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:dailyban/data/models/champion.dart';
 import 'package:dio/dio.dart';
 
-String APItoken = "RGAPI-f2d22595-b875-4764-90d8-0d2a2b4b58ff";
+String APItoken = "RGAPI-8bef733e-be6a-4f15-a3e0-36e8b4afc4a6";
 
 class ChampionsRepository {
   ChampionsRepository();
@@ -51,7 +51,9 @@ class ChampionsRepository {
   }
 
   String stringFormatForImage(String toFormat) {
-    toFormat = toFormat.replaceAll("'", "").replaceAll(" ", "").toLowerCase();
+    toFormat = toFormat.replaceAll("'", "").toLowerCase().replaceAllMapped(
+        RegExp(r'[ ][a-z]', caseSensitive: false),
+        (Match m) => m[0]!.replaceAll(" ", "").toUpperCase());
     toFormat = toFormat[0].toUpperCase() + toFormat.substring(1);
     return toFormat;
   }

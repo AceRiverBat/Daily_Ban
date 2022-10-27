@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:dailyban/data/models/summoner.dart';
 import 'package:dio/dio.dart';
 
-String APItoken = "RGAPI-f2d22595-b875-4764-90d8-0d2a2b4b58ff";
+String APItoken = "RGAPI-8bef733e-be6a-4f15-a3e0-36e8b4afc4a6";
 
 class SummonerRepository {
   SummonerRepository();

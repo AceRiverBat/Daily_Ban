@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:dailyban/data/models/champion.dart';
 import 'package:dio/dio.dart';
 
-String APItoken = "RGAPI-8bef733e-be6a-4f15-a3e0-36e8b4afc4a6";
+String APItoken = "RGAPI-8f678d1e-ad96-4e2d-b97a-7c7fff7cd9b5";
 
 class ChampionsRepository {
   ChampionsRepository();

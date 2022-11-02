@@ -74,8 +74,24 @@ class HomePage extends GetView<HomePageController> {
                     onTap: () {
                       inputList.length <= 4
                           ? inputList.add(buildInput())
-                          : const Text(
-                              'Vous ne pouvez pas ajouter plus de 5 joueurs');
+                          : showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return AlertDialog(
+                                  title: const Text("Attention !!!"),
+                                  content: const Text(
+                                      'Vous ne pouvez pas ajouter plus de 5 joueurs'),
+                                  actions: <Widget>[
+                                    TextButton(
+                                      child: const Text("OK"),
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
                     },
                     child: const Padding(
                       padding: EdgeInsets.only(bottom: 15, top: 15, left: 15),
@@ -90,8 +106,7 @@ class HomePage extends GetView<HomePageController> {
                     onTap: () {
                       inputList.length > 1
                           ? inputList.removeLast()
-                          : const Text(
-                              'Vous ne pouvez pas ajouter plus de 5 joueurs');
+                          : const Text('');
                     },
                     child: const Padding(
                       padding: EdgeInsets.only(bottom: 15, top: 15, left: 15),
